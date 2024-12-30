@@ -43,11 +43,8 @@ add_link_options(
     "SHELL:-s MALLOC='emmalloc'"
     "SHELL:-s MODULARIZE=1"
     "SHELL:-s EXPORT_ES6=1"
-    "SHELL:-s WASM=1"
+    "SHELL:-s WASM=0"
     "SHELL:-s TEXTDECODER=0"
-    # SINGLE_FILE=1 combined with ENVIRONMENT='web' creates code that works on
-    # both bundlders and Node.
-    "SHELL:-s SINGLE_FILE=1"
     "SHELL:-s ENVIRONMENT='web'")
 
 link_libraries(embind)
